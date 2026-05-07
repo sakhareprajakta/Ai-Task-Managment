@@ -1,0 +1,430 @@
+
+
+/* ── Wrap ── */
+.login-wrap {
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: 'DM Sans', sans-serif;
+  background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(91, 110, 245, 0.25) 0%, transparent 70%),
+    #0b0e14;
+}
+
+/* ── Card ── */
+.login-card {
+  background: #131720;
+  border: 1px solid #252d3d;
+  border-radius: 20px;
+  padding: 48px 44px;
+  width: 100%;
+  max-width: 440px;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+}
+
+/* ── Logo ── */
+.login-logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  background: linear-gradient(135deg, #5b6ef5, #8b5cf6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  color: #6b7590;
+  font-size: 14px;
+  margin-bottom: 36px;
+}
+
+/* ── Heading ── */
+.login-heading {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #e8eaf2;
+  margin-bottom: 24px;
+}
+
+/* ── Error ── */
+.login-error {
+  color: #ef4444;
+  font-size: 13px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 16px;
+}
+
+/* ── Field ── */
+.login-field {
+  margin-bottom: 18px;
+}
+
+.login-label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #6b7590;
+  margin-bottom: 6px;
+  letter-spacing: 0.03em;
+}
+
+.login-input {
+  width: 100%;
+  padding: 11px 14px;
+  background: #1a2030;
+  border: 1px solid #252d3d;
+  border-radius: 8px;
+  color: #e8eaf2;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.2s;
+  box-sizing: border-box;
+}
+
+.login-input:focus {
+  border-color: #5b6ef5;
+}
+
+.login-input::placeholder {
+  color: #3d4a62;
+}
+
+/* ── Password wrapper ── */
+.login-pwd-wrap {
+  position: relative;
+}
+
+.login-pwd-wrap .login-input {
+  padding-right: 60px;
+}
+
+.login-show-btn {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #6b7590;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  padding: 0;
+}
+
+.login-show-btn:hover {
+  color: #e8eaf2;
+}
+
+/* ── Remember row ── */
+.login-remember-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.login-remember-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #6b7590;
+  cursor: pointer;
+}
+
+.login-remember-label input[type="checkbox"] {
+  width: 14px;
+  height: 14px;
+  accent-color: #5b6ef5;
+  cursor: pointer;
+}
+
+.login-forgot {
+  font-size: 13px;
+  color: #5b6ef5;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  padding: 0;
+}
+
+.login-forgot:hover {
+  text-decoration: underline;
+}
+
+/* ── Submit button ── */
+.login-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: #5b6ef5;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.18s, transform 0.18s;
+}
+
+.login-btn:hover:not(:disabled) {
+  background: #4a5ee0;
+  transform: translateY(-1px);
+}
+
+.login-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ── Spinner ── */
+.login-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: loginSpin 0.6s linear infinite;
+  flex-shrink: 0;
+}
+
+@keyframes loginSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ── Divider ── */
+.login-divider {
+  height: 1px;
+  background: #252d3d;
+  margin: 24px 0;
+}
+
+/* ── Footer text ── */
+.login-footer-text {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7590;
+}
+
+.login-footer-text .login-link {
+  color: #5b6ef5;
+  cursor: pointer;
+  font-weight: 600;
+  background: none;
+  border: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  padding: 0;
+}
+
+.login-footer-text .login-link:hover {
+  text-decoration: underline;
+}
+
+/* 
+   NEW USER POPUP */
+
+
+/* Field needs relative positioning for popup anchor */
+.login-field-relative {
+  position: relative;
+}
+
+/* ── Popup box ── */
+.login-popup {
+  position: absolute;
+  top: 50%;
+  left: calc(100% + 18px);
+  transform: translateY(-50%);
+  width: 260px;
+  background: #1a2030;
+  border: 1px solid #5b6ef5;
+  border-radius: 14px;
+  padding: 20px 18px 16px;
+  box-shadow: 0 12px 40px rgba(91, 110, 245, 0.25), 0 4px 16px rgba(0,0,0,0.5);
+  z-index: 100;
+  animation: popupIn 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popupIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50%) scale(0.9) translateX(-8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(-50%) scale(1) translateX(0);
+  }
+}
+
+/* ── Left arrow pointing to the field ── */
+.login-popup-arrow {
+  position: absolute;
+  left: -8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 8px solid transparent;
+  border-bottom: 8px solid transparent;
+  border-right: 8px solid #5b6ef5;
+}
+
+/* ── Close button ── */
+.login-popup-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  color: #6b7590;
+  font-size: 13px;
+  cursor: pointer;
+  padding: 2px 5px;
+  border-radius: 4px;
+  line-height: 1;
+  transition: color 0.15s, background 0.15s;
+}
+
+.login-popup-close:hover {
+  color: #e8eaf2;
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ── Icon ── */
+.login-popup-icon {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+/* ── Title ── */
+.login-popup-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #e8eaf2;
+  margin-bottom: 6px;
+}
+
+/* ── Body text ── */
+.login-popup-body {
+  font-size: 13px;
+  color: #6b7590;
+  line-height: 1.55;
+  margin-bottom: 14px;
+}
+
+/* ── Action buttons ── */
+.login-popup-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.login-popup-btn-primary {
+  width: 100%;
+  padding: 9px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  background: #5b6ef5;
+  color: #fff;
+  font-family: 'DM Sans', sans-serif;
+  transition: background 0.15s, transform 0.15s;
+}
+
+.login-popup-btn-primary:hover {
+  background: #4a5ee0;
+  transform: translateY(-1px);
+}
+
+.login-popup-btn-ghost {
+  width: 100%;
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  border: 1px solid #252d3d;
+  background: transparent;
+  color: #6b7590;
+  font-family: 'DM Sans', sans-serif;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+.login-popup-btn-ghost:hover {
+  border-color: #5b6ef5;
+  color: #e8eaf2;
+}
+
+/* ── Responsive: show popup below on small screens ── */
+@media (max-width: 780px) {
+  .login-popup {
+    position: static;
+    transform: none;
+    width: 100%;
+    margin-top: 12px;
+    box-shadow: 0 8px 24px rgba(91, 110, 245, 0.2);
+    animation: popupDown 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  @keyframes popupDown {
+    from { opacity: 0; transform: translateY(-8px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  .login-popup-arrow {
+    display: none;
+  }
+}
+
+/* ── Simple New User Popup ── */
+.popup-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.popup-box {
+  background: #131720;
+  border: 1px solid #252d3d;
+  border-radius: 14px;
+  padding: 28px 28px 24px;
+  width: 100%;
+  max-width: 340px;
+  text-align: center;
+  animation: slideUp 0.22s ease;
+}
+
+@keyframes slideUp {
+  from { transform: translateY(16px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}

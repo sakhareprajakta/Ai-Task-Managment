@@ -1,0 +1,271 @@
+/* ── Shared Auth Styles ── */
+
+.auth-wrap {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.auth-card {
+  background: #ffffff;
+  border-radius: 16px;
+  margin: 30px 200px;
+  padding: 10px 36px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.auth-brand {
+  font-size: 22px;
+  font-weight: 700;
+  color: #6366f1;
+  margin-bottom: 20px;
+}
+
+.auth-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.auth-sub {
+  font-size: 14px;
+  color: #6b7280;
+  margin-bottom: 28px;
+}
+
+.auth-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+.auth-success {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  color: #16a34a;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 13px;
+  margin-bottom: 16px;
+}
+
+/* ── Form ── */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.auth-form input{
+   padding:10px 10px;
+}
+.login-btn{
+  padding: 10px 10px;
+  background-color: blue;
+  color: white;
+ border: 1px  solid gray;
+ border-radius: 5px;
+ font-size: 16px;
+ font-weight: bold;
+}
+.auth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.auth-field label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.auth-field input,
+.auth-field select {
+  padding: 11px 14px;
+  border: 1.5px solid rgb(81, 79, 79);
+  border-radius: 3px;
+  font-size: 14px;
+  color: #111827;
+  background: #f9fafb;
+  outline: none;
+  transition: border-color 0.2s;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.auth-field input:focus,
+.auth-field select:focus {
+  border-color: #6366f1;
+  background: #fff;
+}
+
+.auth-field input::placeholder {
+  color: #9ca3af;
+}
+
+/* ── Password wrap ── */
+.auth-pwd-wrap {
+  position: relative;
+}
+
+.auth-pwd-wrap input {
+  padding-right: 64px;
+}
+
+.auth-pwd-toggle {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  color: #6366f1;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* ── Role selector ── */
+.auth-role-group {
+  display: flex;
+  gap: 10px;
+}
+
+.auth-role-pill {
+  flex: 1;
+  padding: 10px;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 8px;
+  background: #f9fafb;
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+  transition: all 0.15s;
+  text-align: center;
+}
+
+.auth-role-pill:hover {
+  border-color: #6366f1;
+}
+
+.auth-role-pill.active-user {
+  border-color: #8b5cf6;
+  background: #ede9fe;
+  color: #6d28d9;
+}
+
+.auth-role-pill.active-admin {
+  border-color: #6366f1;
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+/* ── Submit button ── */
+.auth-btn {
+  padding: 13px;
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: background 0.2s, transform 0.15s;
+  margin-top: 4px;
+}
+
+.auth-btn:hover:not(:disabled) {
+  background: #4f46e5;
+  transform: translateY(-1px);
+}
+
+.auth-btn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+/* ── Spinner ── */
+.auth-spinner {
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255,255,255,0.35);
+  border-top-color: #fff;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* ── Divider ── */
+.auth-divider {
+  height: 1px;
+  background: #f3f4f6;
+  margin: 24px 0;
+}
+
+/* ── Footer ── */
+.auth-footer {
+  text-align: center;
+  font-size: 14px;
+  color: #6b7280;
+}
+
+.auth-link {
+  background: none;
+  border: none;
+  color: #6366f1;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 0;
+  text-decoration: underline;
+}
+
+/* ── Register suggestion box on login ── */
+.auth-register-suggest {
+  background: #fafafa;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 16px 18px;
+  text-align: center;
+}
+
+.auth-register-suggest p {
+  font-size: 14px;
+  color: #374151;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.auth-register-btn {
+  width: 100%;
+  padding: 10px;
+  border: 1.5px solid #6366f1;
+  border-radius: 8px;
+  background: transparent;
+  color: #6366f1;
+  font-size: 14px;
+  font-weight: 600;
+  transition: all 0.15s;
+}
+
+.auth-register-btn:hover {
+  background: #6366f1;
+  color: #fff;
+}
