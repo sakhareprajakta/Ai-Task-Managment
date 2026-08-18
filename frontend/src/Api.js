@@ -1,11 +1,11 @@
-const BASE = "http://localhost:5000/api";
+const BASE = "https://ai-task-managment.onrender.com/api";
 
 export const api = async (path, method = "GET", body = null, token = null) => {
   const headers = { "Content-Type": "application/json" };
 
   if (token) headers["Authorization"] = `Bearer ${token}`;
 
-  const res = await fetch(`${BASE}${path}`, {  // ✅ FIXED (no space)
+  const res = await fetch(`${BASE}${path}`, {
     method,
     headers,
     body: body ? JSON.stringify(body) : undefined,
