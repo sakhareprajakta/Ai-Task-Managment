@@ -22,7 +22,7 @@ export const TaskManagment = ({ employees }) => {
       setErrorMsg("");
       setSuggestion([]);
       const response = await axios.post(
-        "http://localhost:5000/api/task/suggest",
+        "https://ai-task-managment.onrender.com/api/task/suggest",
         { input: taskTitle.trim() }
       );
       const lines = (response.data.suggestion || "")
@@ -51,7 +51,7 @@ export const TaskManagment = ({ employees }) => {
       return;
     }
     try {
-      await axios.post("http://localhost:5000/api/task/createTask", {
+     await axios.post("https://ai-task-managment.onrender.com/api/task/createTask", {
         taskTitle,
         taskDesc,
         assignedEmp,
