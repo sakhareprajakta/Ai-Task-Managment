@@ -11,7 +11,7 @@ export const EmployeManagment = ({ onEmployeeAdded }) => {
     e.preventDefault();
     if (!empId || !empName || !empSkills) return;
     try {
-      await axios.post("http://localhost:5000/api/emp/create", { empId, empName, empSkills });
+    await axios.post("https://ai-task-managment.onrender.com/api/emp/create", { empId, empName, empSkills});
       setEmpId("");
       setEmpName("");
       setEmpSkills("");

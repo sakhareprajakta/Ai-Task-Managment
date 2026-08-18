@@ -2,8 +2,7 @@ import { useState, useEffect } from "react";
 import { useAuth } from "../context/AuthContext";
 import "./Dashboard.css";
 
-const BASE = "http://localhost:5000/api";
-
+const BASE = "https://ai-task-managment.onrender.com/api";
 export default function Dashboard() {
   const { user, token, isAdmin, logout } = useAuth();
   const [suggestion, setSuggestion] = useState("");

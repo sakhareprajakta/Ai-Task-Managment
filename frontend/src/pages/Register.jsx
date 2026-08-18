@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
 
-const BASE = "http://localhost:5000/api";
+const BASE = "https://ai-task-managment.onrender.com/api";
 
 export default function Register() {
   const navigate = useNavigate();
