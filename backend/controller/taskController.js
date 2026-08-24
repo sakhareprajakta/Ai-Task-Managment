@@ -15,7 +15,7 @@ const suggestTask = async (req, res) => {
     res.status(200).json({ suggestion });
 
   } catch (error) {
-    console.error("suggestTask error:", error);
+    console.error("suggestTask error:", error?.message || error);
 
     res.status(500).json({
       suggestion: "Failed to get suggestion",
